@@ -9,7 +9,7 @@ RSpec.describe DataUtils do
     {
       name: 'Rspec',
       difficulty: 'Easy',
-      att_total: 15,
+      attempts_total: 15,
       attempts_used: 1,
       hints_total: 3,
       hints_used: 1,
