@@ -1167,3 +1167,179 @@
   hints_total: 3
   hints_used: 0
   date: 2019-09-11 10:58:12.868671000 +03:00
+- !ruby/object:TableRow
+  name: Rspec
+  difficulty: Easy
+  attempts_total: 
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 1
+  date: 2019-09-11 11:19:28.998042000 +03:00
+- !ruby/object:TableRow
+  name: Vasya
+  difficulty: :easy
+  attempts_total: 15
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 0
+  date: 2019-09-11 11:19:29.561386000 +03:00
+- !ruby/object:TableRow
+  name: Rspec
+  difficulty: Easy
+  attempts_total: 
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 1
+  date: 2019-09-11 11:20:52.938698000 +03:00
+- !ruby/object:TableRow
+  name: Vasya
+  difficulty: :easy
+  attempts_total: 15
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 0
+  date: 2019-09-11 11:20:53.492828000 +03:00
+- !ruby/object:TableRow
+  name: Rspec
+  difficulty: Easy
+  attempts_total: 
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 1
+  date: 2019-09-11 11:21:59.872811000 +03:00
+- !ruby/object:TableRow
+  name: Vasya
+  difficulty: :easy
+  attempts_total: 15
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 0
+  date: 2019-09-11 11:22:00.448425000 +03:00
+- !ruby/object:TableRow
+  name: Rspec
+  difficulty: Easy
+  attempts_total: 
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 1
+  date: 2019-09-11 11:22:35.802434000 +03:00
+- !ruby/object:TableRow
+  name: Vasya
+  difficulty: :easy
+  attempts_total: 15
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 0
+  date: 2019-09-11 11:22:36.354636000 +03:00
+- !ruby/object:TableRow
+  name: Rspec
+  difficulty: Easy
+  attempts_total: 
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 1
+  date: 2019-09-11 11:23:05.890685000 +03:00
+- !ruby/object:TableRow
+  name: Vasya
+  difficulty: :easy
+  attempts_total: 15
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 0
+  date: 2019-09-11 11:23:06.406502000 +03:00
+- !ruby/object:TableRow
+  name: Rspec
+  difficulty: Easy
+  attempts_total: 
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 1
+  date: 2019-09-11 11:24:43.610079000 +03:00
+- !ruby/object:TableRow
+  name: Vano
+  difficulty: :easy
+  attempts_total: 15
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 0
+  date: 2019-09-11 11:24:44.162840000 +03:00
+- !ruby/object:TableRow
+  name: Rspec
+  difficulty: Easy
+  attempts_total: 
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 1
+  date: 2019-09-11 11:24:58.155239000 +03:00
+- !ruby/object:TableRow
+  name: Vano
+  difficulty: :easy
+  attempts_total: 15
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 0
+  date: 2019-09-11 11:24:58.663563000 +03:00
+- !ruby/object:TableRow
+  name: Rspec
+  difficulty: Easy
+  attempts_total: 
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 1
+  date: 2019-09-11 11:25:07.691382000 +03:00
+- !ruby/object:TableRow
+  name: Vano
+  difficulty: :easy
+  attempts_total: 15
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 0
+  date: 2019-09-11 11:25:08.202598000 +03:00
+- !ruby/object:TableRow
+  name: Rspec
+  difficulty: Easy
+  attempts_total: 
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 1
+  date: 2019-09-11 11:25:26.091362000 +03:00
+- !ruby/object:TableRow
+  name: Vano
+  difficulty: :easy
+  attempts_total: 15
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 0
+  date: 2019-09-11 11:25:26.654819000 +03:00
+- !ruby/object:TableRow
+  name: Rspec
+  difficulty: Easy
+  attempts_total: 
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 1
+  date: 2019-09-11 11:26:15.324448000 +03:00
+- !ruby/object:TableRow
+  name: Vano
+  difficulty: :easy
+  attempts_total: 15
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 0
+  date: 2019-09-11 11:26:15.866063000 +03:00
+- !ruby/object:TableRow
+  name: Rspec
+  difficulty: Easy
+  attempts_total: 
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 1
+  date: 2019-09-11 11:28:16.173932000 +03:00
+- !ruby/object:TableRow
+  name: Vano
+  difficulty: :easy
+  attempts_total: 15
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 0
+  date: 2019-09-11 11:28:16.731322000 +03:00

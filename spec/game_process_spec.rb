@@ -24,7 +24,7 @@ RSpec.describe GameProcess do
       show_hint: '/show_hint' }
   end
 
-  let(:game) { CodebreakerVk::Game.new(name: 'Vasya', difficulty: :easy) }
+  let(:game) { CodebreakerVk::Game.new(name: 'Vano', difficulty: :easy) }
 
   context 'when wrong route' do
     it 'returns status not found' do
@@ -87,7 +87,7 @@ RSpec.describe GameProcess do
 
     context 'when received username' do
       before do
-        post urls[:start], name: 'Vasya', difficulty: :easy
+        post urls[:start], username: 'Vano', difficulty: :easy
       end
 
       it 'sets a session with game' do
@@ -104,7 +104,7 @@ RSpec.describe GameProcess do
 
   context 'when play again' do
     it 'deletes game from session' do
-      env('rack.session', game: CodebreakerVk::Game.new(name: 'Vasya', difficulty: :easy))
+      env('rack.session', game: CodebreakerVk::Game.new(name: 'Vano', difficulty: :easy))
       get urls[:again]
       expect(last_request.session).not_to include(:game)
     end
@@ -160,7 +160,7 @@ RSpec.describe GameProcess do
     end
 
     it 'shows win page' do
-      game.instance_variable_set(:@last_result, '++++')
+      game.instance_variable_set(:@last_result, CodebreakerVk::Game::GOT_IT * 4)
       get urls[:win]
       expect(last_response.body).to include('You won the game!')
     end
@@ -175,7 +175,7 @@ RSpec.describe GameProcess do
     end
 
     it 'redirects to win' do
-      game.instance_variable_set(:@last_result, '++++')
+      game.instance_variable_set(:@last_result, CodebreakerVk::Game::GOT_IT * 4)
       env('rack.session', game: game)
       get urls[:game]
 
