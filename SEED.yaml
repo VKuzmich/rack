@@ -959,3 +959,211 @@
   hints_total: 3
   hints_used: 0
   date: 2019-09-11 10:12:09.374393000 +03:00
+- !ruby/object:TableRow
+  name: Rspec
+  difficulty: Easy
+  attempts_total: 
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 1
+  date: 2019-09-11 10:16:56.261073000 +03:00
+- !ruby/object:TableRow
+  name: Vasya
+  difficulty: :easy
+  attempts_total: 15
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 0
+  date: 2019-09-11 10:16:56.835379000 +03:00
+- !ruby/object:TableRow
+  name: Rspec
+  difficulty: Easy
+  attempts_total: 
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 1
+  date: 2019-09-11 10:17:14.736263000 +03:00
+- !ruby/object:TableRow
+  name: Vasya
+  difficulty: :easy
+  attempts_total: 15
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 0
+  date: 2019-09-11 10:17:15.255244000 +03:00
+- !ruby/object:TableRow
+  name: Rspec
+  difficulty: Easy
+  attempts_total: 
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 1
+  date: 2019-09-11 10:17:56.945158000 +03:00
+- !ruby/object:TableRow
+  name: Vasya
+  difficulty: :easy
+  attempts_total: 15
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 0
+  date: 2019-09-11 10:17:57.438521000 +03:00
+- !ruby/object:TableRow
+  name: Rspec
+  difficulty: Easy
+  attempts_total: 
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 1
+  date: 2019-09-11 10:23:23.200333000 +03:00
+- !ruby/object:TableRow
+  name: Vasya
+  difficulty: :easy
+  attempts_total: 15
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 0
+  date: 2019-09-11 10:23:23.729714000 +03:00
+- !ruby/object:TableRow
+  name: Rspec
+  difficulty: Easy
+  attempts_total: 
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 1
+  date: 2019-09-11 10:23:53.962603000 +03:00
+- !ruby/object:TableRow
+  name: Vasya
+  difficulty: :easy
+  attempts_total: 15
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 0
+  date: 2019-09-11 10:23:54.460414000 +03:00
+- !ruby/object:TableRow
+  name: Rspec
+  difficulty: Easy
+  attempts_total: 
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 1
+  date: 2019-09-11 10:26:52.210054000 +03:00
+- !ruby/object:TableRow
+  name: Vasya
+  difficulty: :easy
+  attempts_total: 15
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 0
+  date: 2019-09-11 10:26:52.770683000 +03:00
+- !ruby/object:TableRow
+  name: Rspec
+  difficulty: Easy
+  attempts_total: 
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 1
+  date: 2019-09-11 10:29:03.996786000 +03:00
+- !ruby/object:TableRow
+  name: Vasya
+  difficulty: :easy
+  attempts_total: 15
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 0
+  date: 2019-09-11 10:29:04.573428000 +03:00
+- !ruby/object:TableRow
+  name: Rspec
+  difficulty: Easy
+  attempts_total: 
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 1
+  date: 2019-09-11 10:45:18.225530000 +03:00
+- !ruby/object:TableRow
+  name: Vasya
+  difficulty: :easy
+  attempts_total: 15
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 0
+  date: 2019-09-11 10:47:02.005348000 +03:00
+- !ruby/object:TableRow
+  name: Rspec
+  difficulty: Easy
+  attempts_total: 
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 1
+  date: 2019-09-11 10:47:55.822078000 +03:00
+- !ruby/object:TableRow
+  name: Vasya
+  difficulty: :easy
+  attempts_total: 15
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 0
+  date: 2019-09-11 10:51:23.504821000 +03:00
+- !ruby/object:TableRow
+  name: Rspec
+  difficulty: Easy
+  attempts_total: 
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 1
+  date: 2019-09-11 10:51:48.357045000 +03:00
+- !ruby/object:TableRow
+  name: Vasya
+  difficulty: :easy
+  attempts_total: 15
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 0
+  date: 2019-09-11 10:51:48.891490000 +03:00
+- !ruby/object:TableRow
+  name: Rspec
+  difficulty: Easy
+  attempts_total: 
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 1
+  date: 2019-09-11 10:52:55.379863000 +03:00
+- !ruby/object:TableRow
+  name: Vasya
+  difficulty: :easy
+  attempts_total: 15
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 0
+  date: 2019-09-11 10:52:55.928193000 +03:00
+- !ruby/object:TableRow
+  name: Rspec
+  difficulty: Easy
+  attempts_total: 
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 1
+  date: 2019-09-11 10:53:38.825575000 +03:00
+- !ruby/object:TableRow
+  name: Vasya
+  difficulty: :easy
+  attempts_total: 15
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 0
+  date: 2019-09-11 10:53:39.370405000 +03:00
+- !ruby/object:TableRow
+  name: Rspec
+  difficulty: Easy
+  attempts_total: 
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 1
+  date: 2019-09-11 10:58:12.320601000 +03:00
+- !ruby/object:TableRow
+  name: Vasya
+  difficulty: :easy
+  attempts_total: 15
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 0
+  date: 2019-09-11 10:58:12.868671000 +03:00

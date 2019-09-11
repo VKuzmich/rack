@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'spec_helper'
 require_relative '../autoload'
 
@@ -85,7 +87,7 @@ RSpec.describe GameProcess do
 
     context 'when received username' do
       before do
-        post urls[:start], 'username' => 'Tester', 'difficulty' => 'Easy'
+        post urls[:start], name: 'Vasya', difficulty: :easy
       end
 
       it 'sets a session with game' do

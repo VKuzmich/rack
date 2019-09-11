@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require_relative '../autoload'
 require 'pry'
 
@@ -15,7 +16,6 @@ class GameProcess
   end
 
   def response
-
     case @request.path
     when '/' then main
     when '/rules' then Rack::Response.new(render('rules.html.erb'))

@@ -12,7 +12,7 @@ RSpec/MultipleExpectations:
   Max: 5
 
 RSpec/ExampleLength:
-  Max: 10
+  Max: 12
 
 RSpec/MessageSpies:
   Enabled: false
@@ -28,6 +28,18 @@ Metrics/ModuleLength:
 
 Metrics/LineLength:
   Max: 120
+
+Metrics/MethodLength:
+  Max: 14
+
+Metrics/AbcSize:
+  Max: 27
+
+Metrics/ClassLength:
+  Max: 120
+
+Metrics/CyclomaticComplexity:
+  Enabled: false
 
 Documentation:
   Enabled: false
