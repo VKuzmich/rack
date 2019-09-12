@@ -131,7 +131,7 @@ class GameProcess
   def game_redirect
     return redirect unless @request.session.key?(:game)
 
-    return redirect('/lose') unless @request.session[:game].attempts.positive?
+    return redirect('/lose') if @request.session[:game].attempts.zero?
 
     redirect('/win') if @request.session[:game].win?
   end
