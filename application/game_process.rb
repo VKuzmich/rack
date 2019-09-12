@@ -39,7 +39,7 @@ class GameProcess
   end
 
   def main
-    return redirect('game') if @request.session.key?(:game)
+    return redirect('/game') if @request.session.key?(:game)
 
     Rack::Response.new(render('menu.html.erb'))
   end
@@ -62,7 +62,7 @@ class GameProcess
     return redirect unless @request.session.key?(:game)
 
     @request.session[:hints] << @request.session[:game].use_hint if @request.session[:game].hints.positive?
-    redirect('game')
+    redirect('/game')
   end
 
   def check
@@ -70,10 +70,10 @@ class GameProcess
 
     @request.session[:result] = @request.session[:game].check(@request.params['number'])
 
-    return redirect('game') unless @request.session[:game].win?
+    return redirect('/game') unless @request.session[:game].win?
 
     save(summary) unless @request.session[:save]
-    redirect('win')
+    redirect('/win')
   end
 
   def lose
@@ -90,7 +90,8 @@ class GameProcess
   end
 
   def redirect(address = '')
-    Rack::Response.new { |response| response.redirect("/#{address}") }
+    Rack::Response.new { |response| response.redirect("#{address}") }
+    # Rack::Response.new { |response| response.redirect("/#{address}") }
   end
 
   def summary
@@ -108,7 +109,7 @@ class GameProcess
   end
 
   def stats
-    return [] unless File.exist?('SEED.yaml')
+    return [] unless File.exist?('spec/fixtures/seed.yaml')
 
     load.sort_by { |row| [row.hints_total, row.attempts_used] }
   end
@@ -116,7 +117,7 @@ class GameProcess
   def start_initialize
     default_setting
     @request.session[:game] = Game.new(name: @request['username'], difficulty: @request['difficulty'].to_sym)
-    redirect('game')
+    redirect('/game')
   end
 
   def default_setting
@@ -130,13 +131,13 @@ class GameProcess
   def game_redirect
     return redirect unless @request.session.key?(:game)
 
-    return redirect('lose') unless @request.session[:game].attempts.positive?
+    return redirect('/lose') unless @request.session[:game].attempts.positive?
 
-    redirect('win') if @request.session[:game].win?
+    redirect('/win') if @request.session[:game].win?
   end
 
   def start_redirect
-    return redirect('game') if @request.session.key?(:game)
+    return redirect('/game') if @request.session.key?(:game)
 
     redirect unless @request.params.key?('username')
   end
@@ -144,12 +145,12 @@ class GameProcess
   def lose_redirect
     return redirect unless @request.session.key?(:game)
 
-    redirect('game') if @request.session[:game].attempts.positive?
+    redirect('/game') if @request.session[:game].attempts.positive?
   end
 
   def win_redirect
     return redirect unless @request.session.key?(:game)
 
-    redirect('game') unless @request.session[:game].win?
+    redirect('/game') unless @request.session[:game].win?
   end
 end
