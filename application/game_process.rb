@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require_relative '../autoload'
-require 'pry'
 
 class GameProcess
   include CodebreakerVk
@@ -18,8 +17,8 @@ class GameProcess
   def response
     case @request.path
     when '/' then main
-    when '/rules' then Rack::Response.new(render('rules.html.erb'))
-    when '/statistics' then Rack::Response.new(render('statistics.html.erb'))
+    when '/rules' then rules
+    when '/statistics' then statistic
     when '/start' then start
     when '/play_again' then play_again
     when '/check' then check
@@ -31,7 +30,13 @@ class GameProcess
     end
   end
 
-  # private
+  def rules
+    Rack::Response.new(render('rules.html.erb'))
+  end
+
+  def statistic
+    Rack::Response.new(render('statistics.html.erb'))
+  end
 
   def main
     return redirect('game') if @request.session.key?(:game)
@@ -42,7 +47,7 @@ class GameProcess
   def play_again
     @request.session.delete(:game)
 
-    redirect
+    redirect('/')
   end
 
   def start
@@ -103,7 +108,7 @@ class GameProcess
   end
 
   def stats
-    return [] unless File.exist?('application/spec/fixtures/seed.yaml')
+    return [] unless File.exist?('SEED.yaml')
 
     load.sort_by { |row| [row.hints_total, row.attempts_used] }
   end
