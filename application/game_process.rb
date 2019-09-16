@@ -68,13 +68,11 @@ class GameProcess
   end
 
   def game
-    if @request.session[:game].attempts.zero?
-      redirect(URLS[:lose])
-    elsif @request.session[:game].win?
-      redirect(URLS[:win])
-    else
-      Rack::Response.new(render('game.html.erb'))
-    end
+    return redirect(URLS[:lose]) if @request.session[:game].attempts.zero?
+
+    return redirect(URLS[:win]) if @request.session[:game].win?
+
+    Rack::Response.new(render('game.html.erb'))
   end
 
   def show_hint
