@@ -6,6 +6,19 @@ class GameProcess
   include CodebreakerVk
   include DataUtils
 
+  URLS = {
+    main: '/',
+    rules: '/rules',
+    statistics: '/statistics',
+    start: '/start',
+    play_again: '/play_again',
+    check: '/check',
+    lose: '/lose',
+    game: '/game',
+    win: '/win',
+    show_hint: '/show_hint',
+  }.freeze
+
   def self.call(env)
     new(env).response.finish
   end
@@ -16,16 +29,16 @@ class GameProcess
 
   def response
     case @request.path
-    when '/' then main
-    when '/rules' then rules
-    when '/statistics' then statistic
-    when '/start' then start
-    when '/play_again' then play_again
-    when '/check' then check
-    when '/lose' then lose
-    when '/game' then game
-    when '/win' then win
-    when '/show_hint' then show_hint
+    when URLS[:main]        then main
+    when URLS[:rules]       then rules
+    when URLS[:statistics]  then statistic
+    when URLS[:start]       then start
+    when URLS[:play_again]  then play_again
+    when URLS[:check]       then check
+    when URLS[:lose]        then lose
+    when URLS[:game]        then game
+    when URLS[:win]         then win
+    when URLS[:show_hint]   then show_hint
     else Rack::Response.new('Not Found', 404)
     end
   end
@@ -39,7 +52,7 @@ class GameProcess
   end
 
   def main
-    return redirect('/game') if @request.session.key?(:game)
+    return redirect(URLS[:game]) if @request.session.key?(:game)
 
     Rack::Response.new(render('menu.html.erb'))
   end
@@ -47,7 +60,7 @@ class GameProcess
   def play_again
     @request.session.delete(:game)
 
-    redirect('/')
+    redirect(URLS[:main])
   end
 
   def start
@@ -59,10 +72,10 @@ class GameProcess
   end
 
   def show_hint
-    return redirect unless @request.session.key?(:game)
+    # return redirect unless @request.session.key?(:game)
 
     @request.session[:hints] << @request.session[:game].use_hint if @request.session[:game].hints.positive?
-    redirect('/game')
+    redirect(URLS[:game])
   end
 
   def check
@@ -70,10 +83,10 @@ class GameProcess
 
     @request.session[:result] = @request.session[:game].check(@request.params['number'])
 
-    return redirect('/game') unless @request.session[:game].win?
+    return redirect(URLS[:game]) unless @request.session[:game].win?
 
     save(summary) unless @request.session[:save]
-    redirect('/win')
+    redirect(URLS[:win])
   end
 
   def lose
@@ -90,7 +103,7 @@ class GameProcess
   end
 
   def redirect(address = '')
-    Rack::Response.new { |response| response.redirect("#{address}") }
+    Rack::Response.new { |response| response.redirect(address.to_s) }
     # Rack::Response.new { |response| response.redirect("/#{address}") }
   end
 
@@ -117,7 +130,7 @@ class GameProcess
   def start_initialize
     default_setting
     @request.session[:game] = Game.new(name: @request['username'], difficulty: @request['difficulty'].to_sym)
-    redirect('/game')
+    redirect(URLS[:game])
   end
 
   def default_setting
@@ -129,15 +142,15 @@ class GameProcess
   end
 
   def game_redirect
-    return redirect unless @request.session.key?(:game)
+    # return redirect unless @request.session.key?(:game)
 
-    return redirect('/lose') if @request.session[:game].attempts.zero?
+    return redirect(URLS[:lose]) if @request.session[:game].attempts.zero?
 
-    redirect('/win') if @request.session[:game].win?
+    redirect(URLS[:win]) if @request.session[:game].win?
   end
 
   def start_redirect
-    return redirect('/game') if @request.session.key?(:game)
+    return redirect(URLS[:game]) if @request.session.key?(:game)
 
     redirect unless @request.params.key?('username')
   end
@@ -145,12 +158,12 @@ class GameProcess
   def lose_redirect
     return redirect unless @request.session.key?(:game)
 
-    redirect('/game') if @request.session[:game].attempts.positive?
+    redirect(URLS[:game]) if @request.session[:game].attempts.positive?
   end
 
   def win_redirect
-    return redirect unless @request.session.key?(:game)
+    # return redirect unless @request.session.key?(:game)
 
-    redirect('/game') unless @request.session[:game].win?
+    redirect(URLS[:game]) unless @request.session[:game].win?
   end
 end
