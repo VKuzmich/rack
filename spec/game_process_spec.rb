@@ -16,7 +16,7 @@ RSpec.describe GameProcess do
       rules: '/rules',
       stats: '/statistics',
       start: '/start',
-      again: '/play_again',
+      play_again: '/play_again',
       check: '/check',
       lose: '/lose',
       win: '/win',
@@ -24,7 +24,7 @@ RSpec.describe GameProcess do
       show_hint: '/show_hint' }
   end
 
-  let(:game) { CodebreakerVk::Game.new(name: 'Vano', difficulty: :easy) }
+  let(:game) { CodebreakerVk::Game.new(name: 'New_name', difficulty: :easy) }
 
   context 'when wrong route' do
     it 'returns status not found' do
@@ -36,7 +36,7 @@ RSpec.describe GameProcess do
   context 'when right route' do
     context 'with no game' do
       it 'returns redirect' do
-        urls.values[3..6].each do |route|
+        urls.values[3..5].each do |route|
           get route
           expect(last_response).to be_redirect
         end
@@ -87,7 +87,7 @@ RSpec.describe GameProcess do
 
     context 'when received username' do
       before do
-        post urls[:start], username: 'Vano', difficulty: :easy
+        post urls[:start], username: 'New_name', difficulty: :easy
       end
 
       it 'sets a session with game' do
@@ -95,7 +95,7 @@ RSpec.describe GameProcess do
       end
 
       it 'redirects to game' do
-        expect(get(urls[:start])).to be_redirect
+        expect(get(urls[:main])).to be_redirect
 
         expect(last_response.header['Location']).to eq(urls[:game])
       end
@@ -104,13 +104,13 @@ RSpec.describe GameProcess do
 
   context 'when play again' do
     it 'deletes game from session' do
-      env('rack.session', game: CodebreakerVk::Game.new(name: 'Vano', difficulty: :easy))
-      get urls[:again]
+      env('rack.session', game: CodebreakerVk::Game.new(name: 'New_name', difficulty: :easy))
+      get urls[:play_again]
       expect(last_request.session).not_to include(:game)
     end
 
     it 'redirects to main' do
-      get urls[:again]
+      get urls[:play_again]
       expect(last_response.header['Location']).to eq(urls[:main])
     end
   end

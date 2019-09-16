@@ -68,12 +68,16 @@ class GameProcess
   end
 
   def game
-    game_redirect || Rack::Response.new(render('game.html.erb'))
+    if @request.session[:game].attempts.zero?
+      redirect(URLS[:lose])
+    elsif @request.session[:game].win?
+      redirect(URLS[:win])
+    else
+      Rack::Response.new(render('game.html.erb'))
+    end
   end
 
   def show_hint
-    # return redirect unless @request.session.key?(:game)
-
     @request.session[:hints] << @request.session[:game].use_hint if @request.session[:game].hints.positive?
     redirect(URLS[:game])
   end
@@ -104,7 +108,6 @@ class GameProcess
 
   def redirect(address = '')
     Rack::Response.new { |response| response.redirect(address.to_s) }
-    # Rack::Response.new { |response| response.redirect("/#{address}") }
   end
 
   def summary
@@ -141,29 +144,15 @@ class GameProcess
     )
   end
 
-  def game_redirect
-    # return redirect unless @request.session.key?(:game)
-
-    return redirect(URLS[:lose]) if @request.session[:game].attempts.zero?
-
-    redirect(URLS[:win]) if @request.session[:game].win?
-  end
-
   def start_redirect
-    return redirect(URLS[:game]) if @request.session.key?(:game)
-
     redirect unless @request.params.key?('username')
   end
 
   def lose_redirect
-    return redirect unless @request.session.key?(:game)
-
     redirect(URLS[:game]) if @request.session[:game].attempts.positive?
   end
 
   def win_redirect
-    # return redirect unless @request.session.key?(:game)
-
     redirect(URLS[:game]) unless @request.session[:game].win?
   end
 end
