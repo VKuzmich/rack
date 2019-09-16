@@ -15,8 +15,9 @@ group :development do
   gem 'overcommit', '~> 0.48.0'
   gem 'pry', '~> 0.12.2'
   gem 'pry-byebug', '~> 3.7'
-  gem 'rubocop', '~> 0.71.0'
+  gem 'rubocop', '~> 0.71.0', require: false
   gem 'rubocop-performance', '~> 1.3'
+  gem 'rubycritic', require: false
 end
 
 group :test do
