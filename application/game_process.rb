@@ -16,7 +16,7 @@ class GameProcess
     lose: '/lose',
     game: '/game',
     win: '/win',
-    show_hint: '/show_hint',
+    show_hint: '/show_hint'
   }.freeze
 
   def self.call(env)

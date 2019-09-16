@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class ReturnRequests
-
   def initialize(app, status = 302)
     @app = app
     @status = status
