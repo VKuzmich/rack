@@ -64,7 +64,9 @@ class GameProcess
   end
 
   def start
-    start_redirect || start_initialize
+    return redirect unless @request.params.key?('username')
+
+    start_initialize
   end
 
   def game
@@ -92,11 +94,15 @@ class GameProcess
   end
 
   def lose
-    lose_redirect || Rack::Response.new(render('lose.html.erb'))
+    return redirect(URLS[:game]) if @request.session[:game].attempts.positive?
+
+    Rack::Response.new(render('lose.html.erb'))
   end
 
   def win
-    win_redirect || Rack::Response.new(render('win.html.erb'))
+    return redirect(URLS[:game]) unless @request.session[:game].win?
+
+    Rack::Response.new(render('win.html.erb'))
   end
 
   def render(template)
@@ -123,7 +129,7 @@ class GameProcess
   end
 
   def stats
-    return [] unless File.exist?('spec/fixtures/seed.yaml')
+    return [] unless File.exist?('db/results.yaml')
 
     load.sort_by { |row| [row.hints_total, row.attempts_used] }
   end
@@ -140,17 +146,5 @@ class GameProcess
       hints: [],
       save: false
     )
-  end
-
-  def start_redirect
-    redirect unless @request.params.key?('username')
-  end
-
-  def lose_redirect
-    redirect(URLS[:game]) if @request.session[:game].attempts.positive?
-  end
-
-  def win_redirect
-    redirect(URLS[:game]) unless @request.session[:game].win?
   end
 end
