@@ -12,7 +12,7 @@ RSpec.describe GameProcess do
 
   let(:wrong_path) { '/wrong_way' }
   let(:urls) do
-    { main: '/',
+    { root: '/',
       rules: '/rules',
       stats: '/statistics',
       start: '/start',
@@ -53,7 +53,7 @@ RSpec.describe GameProcess do
 
   context 'when main' do
     it 'returns status ok' do
-      get urls[:main]
+      get urls[:root]
       expect(last_response).to be_ok
     end
   end
@@ -95,7 +95,7 @@ RSpec.describe GameProcess do
       end
 
       it 'redirects to game' do
-        expect(get(urls[:main])).to be_redirect
+        expect(get(urls[:root])).to be_redirect
 
         expect(last_response.header['Location']).to eq(urls[:game])
       end
@@ -111,7 +111,7 @@ RSpec.describe GameProcess do
 
     it 'redirects to main' do
       get urls[:play_again]
-      expect(last_response.header['Location']).to eq(urls[:main])
+      expect(last_response.header['Location']).to eq(urls[:root])
     end
   end
 

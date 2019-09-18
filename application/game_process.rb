@@ -7,7 +7,7 @@ class GameProcess
   include DataUtils
 
   URLS = {
-    main: '/',
+    root: '/',
     rules: '/rules',
     statistics: '/statistics',
     start: '/start',
@@ -29,7 +29,7 @@ class GameProcess
 
   def response
     case @request.path
-    when URLS[:main]        then main
+    when URLS[:root]        then main
     when URLS[:rules]       then rules
     when URLS[:statistics]  then statistic
     when URLS[:start]       then start
@@ -60,7 +60,7 @@ class GameProcess
   def play_again
     @request.session.delete(:game)
 
-    redirect(URLS[:main])
+    redirect(URLS[:root])
   end
 
   def start
@@ -94,7 +94,7 @@ class GameProcess
   end
 
   def lose
-    return redirect(URLS[:game]) if @request.session[:game].attempts.positive?
+    return redirect(URLS[:game]) unless @request.session[:game].attempts.zero?
 
     Rack::Response.new(render('lose.html.erb'))
   end

@@ -9,8 +9,12 @@ class AuthMiddleware
   def call(env)
     @request = Rack::Request.new(env)
 
-    return [@status, { 'Location' => GameProcess::URLS[:game] }, ['']] if @request.session.key?(:main)
+    return [@status, { 'Location' => GameProcess::URLS[:game] }, ['']] if authenticated?
 
     @app.call(env)
+  end
+
+  def authenticated?
+    @request.session.key?(:root) && @request.session.key?('username')
   end
 end
