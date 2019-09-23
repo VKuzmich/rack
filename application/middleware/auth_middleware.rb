@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 class AuthMiddleware
-  GAME_LINKS = ['/check', '/show_hint', '/win', '/lose'].freeze
+  AUTH_PATHS = ['/check', '/win', '/lose'].freeze
+  PUBLIC_PATHS = ['/', '/rules', '/statistics'].freeze
 
   def initialize(app, status = 302)
     @app = app
@@ -11,16 +12,22 @@ class AuthMiddleware
   def call(env)
     @request = Rack::Request.new(env)
 
-    return [@status, { 'Location' => GameProcess::URLS[:game] }, ['']] if authenticated? && game_links?
+    return [@status, { 'Location' => GameProcess::URLS[:root] }, ['']] if !authenticated? && auth_paths?
+
+    return [@status, { 'Location' => GameProcess::URLS[:game] }, ['']] if authenticated? && public_paths?
 
     @app.call(env)
   end
 
   def authenticated?
-    @request.session.key?(:game) && @request.session.key?('username')
+    @request.session.key?(:game)
   end
 
-  def game_links?
-    GAME_LINKS.include?(@request.path)
+  def auth_paths?
+    AUTH_PATHS.include?(@request.path)
+  end
+
+  def public_paths?
+    PUBLIC_PATHS.include?(@request.path)
   end
 end
