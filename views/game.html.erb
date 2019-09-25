@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" class="mdl-js">
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link href="assets/favicon.ico" rel="icon">
-  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/css/styles.css" rel="stylesheet">
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/bootstrap.min.js"></script>
-  <title><%= I18n.t(:title) %></title>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="assets/favicon.ico" rel="icon">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/styles.css" rel="stylesheet">
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <title><%= I18n.t(:title) %></title>
+  </head>
   <body>
     <section id="introduction">
       <div class="container">
@@ -38,7 +40,6 @@
                   <span class="badge badge-light"><%= @request.session[:game].attempts %></span>
                 </button>
               </div>
-
               <div class="col button">
                 <button type="button" class="btn btn-primary float-right" disabled>
                   <%= I18n.t(:hints) %>
@@ -47,7 +48,6 @@
               </div>
             </div>
             <hr class="mb-4">
-
             <form method="post" action="/check">
               <div class="form-group">
                 <input class="form-control guess_input" name="number" pattern="^[1-6]{4}$" placeholder="1234" required="" autocomplete="off">
@@ -60,16 +60,13 @@
                     <% else %> <button type="button" class="btn btn-primary marks" disabled>-</button>
                     <% end %>
                   <% end %>
-
                   <% @request.session[:result].chars.length.times do %>
                   <button type="button" class="btn btn-danger marks" disabled>x</button>
                   <% end %>
                 <% end %>
-
                 </div>
               </div>
               <hr class="mb-4">
-
               <button type="submit" class="btn btn-primary btn-lg">
                 <%= I18n.t(:submit) %>
               </button>
@@ -86,7 +83,7 @@
             </form>
           </div>
         </div>
-        </div>
+      </div>
     </section>
   </body>
 </html>

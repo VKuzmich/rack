@@ -1,8 +1,7 @@
 # frozen_string_literal: true
 
 class AuthMiddleware
-  AUTH_PATHS = ['/check', '/win', '/lose'].freeze
-  PUBLIC_PATHS = ['/', '/rules', '/statistics'].freeze
+  AUTH_PATHS = %w[/check /win /lose].freeze
 
   def initialize(app, status = 302)
     @app = app
@@ -14,8 +13,6 @@ class AuthMiddleware
 
     return [@status, { 'Location' => GameProcess::URLS[:root] }, ['']] if !authenticated? && auth_paths?
 
-    return [@status, { 'Location' => GameProcess::URLS[:game] }, ['']] if authenticated? && public_paths?
-
     @app.call(env)
   end
 
@@ -25,9 +22,5 @@ class AuthMiddleware
 
   def auth_paths?
     AUTH_PATHS.include?(@request.path)
-  end
-
-  def public_paths?
-    PUBLIC_PATHS.include?(@request.path)
   end
 end
