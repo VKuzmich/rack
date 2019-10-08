@@ -4,7 +4,7 @@ require 'i18n'
 require 'yaml'
 require_relative 'application/config/i18n'
 require 'codebreaker_vk'
-require 'pry'
+# require 'pry'
 require 'rack'
 
 require_relative 'application/data_utils'
