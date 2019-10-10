@@ -3,7 +3,8 @@
 /coverage/
 .idea
 coverage
-SEED.yaml
+
 /.byebug_history
 /tmp/echo '.idea' >> .gitignore
 tmp
+/SEED.yaml

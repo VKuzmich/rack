@@ -1,0 +1,129 @@
+---
+- !ruby/object:TableRow
+  name: Vasya
+  difficulty: :easy
+  attempts_total: 15
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 0
+  date: 2019-09-11 10:52:55.928193000 +03:00
+- !ruby/object:TableRow
+  name: Boris
+  difficulty: Easy
+  attempts_total: 15
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 1
+  date: 2019-10-10 23:28:23.670663000 +03:00
+- !ruby/object:TableRow
+  name: :name
+  difficulty: :easy
+  attempts_total: 15
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 0
+  date: 2019-10-10 23:28:24.183190000 +03:00
+- !ruby/object:TableRow
+  name: Boris
+  difficulty: Easy
+  attempts_total: 15
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 1
+  date: 2019-10-10 23:30:09.493662000 +03:00
+- !ruby/object:TableRow
+  name: :name
+  difficulty: :easy
+  attempts_total: 15
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 0
+  date: 2019-10-10 23:30:10.052301000 +03:00
+- !ruby/object:TableRow
+  name: Boris
+  difficulty: Easy
+  attempts_total: 15
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 1
+  date: 2019-10-10 23:31:36.883446000 +03:00
+- !ruby/object:TableRow
+  name: Boris
+  difficulty: Easy
+  attempts_total: 15
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 1
+  date: 2019-10-10 23:32:09.768730000 +03:00
+- !ruby/object:TableRow
+  name: Boris
+  difficulty: Easy
+  attempts_total: 15
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 1
+  date: 2019-10-10 23:38:32.004212000 +03:00
+- !ruby/object:TableRow
+  name: New_name
+  difficulty: :easy
+  attempts_total: 15
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 0
+  date: 2019-10-10 23:38:32.567206000 +03:00
+- !ruby/object:TableRow
+  name: Boris
+  difficulty: Easy
+  attempts_total: 15
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 1
+  date: 2019-10-10 23:50:49.770568000 +03:00
+- !ruby/object:TableRow
+  name: New_name
+  difficulty: :easy
+  attempts_total: 15
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 0
+  date: 2019-10-10 23:50:50.393966000 +03:00
+- !ruby/object:TableRow
+  name: Boris
+  difficulty: Easy
+  attempts_total: 15
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 1
+  date: 2019-10-10 23:57:07.822456000 +03:00
+- !ruby/object:TableRow
+  name: New_name
+  difficulty: :easy
+  attempts_total: 15
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 0
+  date: 2019-10-10 23:57:08.241781000 +03:00
+- !ruby/object:TableRow
+  name: gort
+  difficulty: :easy
+  attempts_total: 15
+  attempts_used: 8
+  hints_total: 3
+  hints_used: 2
+  date: 2019-10-11 00:03:17.477317000 +03:00
+- !ruby/object:TableRow
+  name: Boris
+  difficulty: Easy
+  attempts_total: 15
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 1
+  date: 2019-10-11 00:05:55.182187000 +03:00
+- !ruby/object:TableRow
+  name: New_name
+  difficulty: :easy
+  attempts_total: 15
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 0
+  date: 2019-10-11 00:05:55.582170000 +03:00

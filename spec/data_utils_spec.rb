@@ -7,7 +7,7 @@ RSpec.describe DataUtils do
   let(:dummy_class) { Class.new { extend DataUtils } }
   let(:summary) do
     {
-      name: 'Rspec',
+      name: 'Boris',
       difficulty: 'Easy',
       attempts_total: 15,
       attempts_used: 1,
