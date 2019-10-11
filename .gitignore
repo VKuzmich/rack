@@ -8,3 +8,4 @@ coverage
 /tmp/echo '.idea' >> .gitignore
 tmp
 /SEED.yaml
+db/SEED.yaml
