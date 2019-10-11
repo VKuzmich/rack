@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class AuthMiddleware
-  AUTH_PATHS = %w[/check /win /lose].freeze
+  AUTH_PATHS = %w[/check /win /lose /game].freeze
 
   def initialize(app, status = 302)
     @app = app
