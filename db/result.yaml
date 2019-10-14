@@ -1,0 +1,18 @@
+---
+- !ruby/object:TableRow
+  name: Boris
+  difficulty: Easy
+  attempts_total: 15
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 1
+  date: 2019-10-14 23:54:08.777836000 +03:00
+---
+- !ruby/object:TableRow
+  name: New_name
+  difficulty: :easy
+  attempts_total: 15
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 0
+  date: 2019-10-14 23:54:09.238763000 +03:00

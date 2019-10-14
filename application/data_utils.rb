@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module DataUtils
-  SEED = 'db/seed.yaml'
+  SEED = 'db/result.yaml'
 
   def load
     YAML.load_file(SEED)
