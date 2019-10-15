@@ -1,0 +1,17 @@
+---
+- !ruby/object:TableRow
+  name: hippy
+  difficulty: :easy
+  attempts_total: 15
+  attempts_used: 4
+  hints_total: 3
+  hints_used: 3
+  date: 2019-10-15 10:15:45.415916000 +03:00
+- !ruby/object:TableRow
+  name: gugu
+  difficulty: :medium
+  attempts_total: 10
+  attempts_used: 9
+  hints_total: 2
+  hints_used: 2
+  date: 2019-10-15 11:01:21.467693000 +03:00
