@@ -1,18 +1,18 @@
 # frozen_string_literal: true
 
 module DataUtils
-  SEED = 'database/database.yaml'
+  DATABASE = 'database/database.yaml'
 
   def load
-    YAML.load_file(SEED)
+    YAML.load_file(DATABASE)
   end
 
   def save(summary)
     row = TableRow.new(summary)
-    return File.write(SEED, [row].to_yaml) unless File.exist?(SEED)
+    return File.write(DATABASE, [row].to_yaml) unless File.exist?(DATABASE)
 
     table = load
     table << row
-    File.write(SEED, table.to_yaml)
+    File.write(DATABASE, table.to_yaml)
   end
 end

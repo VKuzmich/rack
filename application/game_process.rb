@@ -129,7 +129,7 @@ class GameProcess
   end
 
   def stats
-    return [] unless File.exist?(SEED)
+    return [] unless File.exist?(DATABASE)
 
     load.sort_by { |row| [row.hints_total, row.attempts_used] }
   end
