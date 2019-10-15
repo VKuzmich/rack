@@ -1,0 +1,89 @@
+---
+- !ruby/object:TableRow
+  name: New_name
+  difficulty: :easy
+  attempts_total: 15
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 0
+  date: 2019-10-10 17:18:44.320600000 +03:00
+- !ruby/object:TableRow
+  name: Rspec
+  difficulty: Easy
+  attempts_total: 15
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 1
+  date: 2019-10-10 21:26:07.858042000 +03:00
+- !ruby/object:TableRow
+  name: New_name
+  difficulty: :easy
+  attempts_total: 15
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 0
+  date: 2019-10-10 21:26:08.651671000 +03:00
+- !ruby/object:TableRow
+  name: Rspec
+  difficulty: Easy
+  attempts_total: 15
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 1
+  date: 2019-10-10 21:27:58.986921000 +03:00
+- !ruby/object:TableRow
+  name: New_name
+  difficulty: :easy
+  attempts_total: 15
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 0
+  date: 2019-10-10 21:27:59.692409000 +03:00
+- !ruby/object:TableRow
+  name: Rspec
+  difficulty: Easy
+  attempts_total: 15
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 1
+  date: 2019-10-10 21:29:38.278340000 +03:00
+- !ruby/object:TableRow
+  name: New_name
+  difficulty: :easy
+  attempts_total: 15
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 0
+  date: 2019-10-10 21:29:38.846526000 +03:00
+- !ruby/object:TableRow
+  name: Rspec
+  difficulty: Easy
+  attempts_total: 15
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 1
+  date: 2019-10-10 21:30:30.275317000 +03:00
+- !ruby/object:TableRow
+  name: New_name
+  difficulty: :easy
+  attempts_total: 15
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 0
+  date: 2019-10-10 21:30:30.708711000 +03:00
+- !ruby/object:TableRow
+  name: Rspec
+  difficulty: Easy
+  attempts_total: 15
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 1
+  date: 2019-10-10 21:33:49.009581000 +03:00
+- !ruby/object:TableRow
+  name: New_name
+  difficulty: :easy
+  attempts_total: 15
+  attempts_used: 1
+  hints_total: 3
+  hints_used: 0
+  date: 2019-10-10 21:33:49.404563000 +03:00

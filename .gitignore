@@ -7,5 +7,4 @@ coverage
 /.byebug_history
 /tmp/echo '.idea' >> .gitignore
 tmp
-/SEED.yaml
-db/SEED.yaml
+
