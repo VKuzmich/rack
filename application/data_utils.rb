@@ -1,5 +1,4 @@
 # frozen_string_literal: true
-# require 'byebug'
 
 module DataUtils
   SEED = 'database/database.yaml'
