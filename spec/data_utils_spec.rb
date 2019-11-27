@@ -1,0 +1,26 @@
+# frozen_string_literal: true
+
+require_relative 'spec_helper'
+require_relative '../autoload'
+
+RSpec.describe DataUtils do
+  let(:dummy_class) { Class.new { extend DataUtils } }
+  let(:summary) do
+    {
+      name: 'Boris',
+      difficulty: 'Easy',
+      attempts_total: 15,
+      attempts_used: 1,
+      hints_total: 3,
+      hints_used: 1,
+      date: Time.now
+    }
+  end
+
+  describe '#load' do
+    it 'loads a TableRow object array from file' do
+      dummy_class.save(summary)
+      expect(dummy_class.load[0].is_a?(TableRow)).to eq(true)
+    end
+  end
+end
