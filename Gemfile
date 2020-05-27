@@ -9,7 +9,7 @@ ruby '2.6.3'
 gem 'codebreaker_vk', '~> 1.0', '>= 1.0.3'
 gem 'i18n', '~> 1.6'
 gem 'puma'
-gem 'rack', '~> 2.0', '>= 2.0.7'
+gem 'rack', '~> 2.0'
 
 group :development do
   gem 'bundle-audit', '~> 0.1.0'
